@@ -191,5 +191,160 @@ Ensures future applies are accurate.
 
 ---
 
+# 📦 Example: Create AWS EC2 Instance
 
+```hcl
+provider "aws" {
+  region = "ap-south-1"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-0e6329e222e662a52"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Terraform-EC2"
+  }
+}
+```
+---
+
+# 🧱 Real-World Use Cases
+
+Terraform can build:
+
+- VPC networks (subnets, NAT, IGW)
+- Kubernetes clusters (EKS, GKE, AKS)
+- Auto-scaling systems
+- Serverless applications (Lambda)
+- Multi-environment setups
+- Database architectures (RDS, Aurora)
+- Monitoring/Logging systems
+- IAM policies & roles
+- Multi-cloud deployments
+- CI/CD infrastructure
+
+---
+
+# 🔥 Advanced Terraform Features
+
+## ✔ Backends (State Storage)
+Used to store and manage state securely.
+
+Types:
+- Local
+- S3 + DynamoDB Locking
+- Terraform Cloud
+- Azure Blob
+- GCS
+- Consul
+
+Backend benefits:
+- State locking
+- Versioning
+- Collaboration
+- Security
+
+---
+
+## ✔ Data Sources
+Used to fetch existing cloud information like:
+- AMIs
+- VPC IDs
+- Subnets
+- Secrets
+
+---
+
+## ✔ Provisioners
+Used for bootstrapping only.
+
+Types:
+- local-exec
+- remote-exec
+- file
+
+---
+
+## ✔ Workspaces
+Manage multiple environments:
+- dev
+- stage
+- prod
+
+Each workspace gets its own state.
+
+---
+
+## ✔ Lifecycle Rules
+Control how resources behave:
+- create_before_destroy
+- prevent_destroy
+
+---
+
+## ✔ Meta Arguments
+Make Terraform more dynamic:
+- count
+- for_each
+- depends_on
+- dynamic blocks
+
+---
+
+## ✔ Debugging Tools
+- terraform show
+- terraform graph
+- terraform refresh
+- terraform state
+- terraform import
+- TF_LOG=DEBUG
+
+---
+
+# 🛡️ Security Best Practices
+
+- Never commit state files
+- Use remote encrypted backends
+- Store secrets in environment variables
+- Use IAM roles instead of static keys
+- Restrict state access
+- Enable state versioning
+
+---
+
+# 🎯 Best Practices for Production
+
+- Use modules for everything
+- DRY (Don't Repeat Yourself)
+- Use terraform fmt & validate
+- Review terraform plan every time
+- Separate environments
+- Pin provider versions
+- Use descriptive resource names
+- Secure backend configuration
+- Automate with CI/CD
+
+---
+
+# 🧭 Future Enhancements
+
+- Remote backend (S3 + DynamoDB)
+- Fully modular architecture
+- CI/CD integration (GitHub Actions/Jenkins)
+- Terraform Cloud integration
+- Terratest for infra validation
+- Architecture diagrams
+- Policy enforcement (Sentinel)
+- Cost analysis integration
+
+---
+
+# 📚 References
+
+- Official HashiCorp Documentation
+- Terraform Registry
+- AWS, Azure, GCP Provider Docs
+
+---
 
