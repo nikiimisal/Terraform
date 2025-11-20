@@ -2,8 +2,6 @@
 
 Terraform is an open-source **Infrastructure as Code (IaC)** tool developed by HashiCorp that allows you to provision, manage, scale, and destroy cloud infrastructure through declarative configuration files. Instead of clicking through cloud consoles, Terraform enables you to define infrastructure as code—consistent, automated, reproducible, and version-controlled.
 
-This README provides a complete understanding of Terraform from fundamentals to advanced topics in a clear chapter-based format.
-
 ---
 
 # 📘 What Is Terraform?
@@ -135,7 +133,7 @@ Benefits:
 
 ---
 
-# 🔄 Chapter 4 — Terraform Workflow / Lifecycle
+# 🔄 Terraform Workflow / Lifecycle
 
 ### 1️⃣ terraform init  
 Initializes the working directory.
@@ -345,6 +343,17 @@ Make Terraform more dynamic:
 - Official HashiCorp Documentation
 - Terraform Registry
 - AWS, Azure, GCP Provider Docs
+
+---
+# 👨‍💻 Author
+
+Nikhil Misal (nikiimisal)
+
+📧 [Email Me](nik0misal@gmail.com)  
+🌐 [GitHub Profile](https://github.com/nikiimisal)
+
+## 🏷️ License
+Open-source, free for educational purposes.
 
 ---
 
